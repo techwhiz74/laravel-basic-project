@@ -1,22 +1,49 @@
 # **Laravel Basic Project**
 
+A Laravel 5.5 basic project
+
 ---
 
-A Laravel 5.5 basic project
+## **Table of Contents**
+
+- [Description](#description)
+- [Usage](#usage)
+- [Changes](#changes)
+	- [Directories](#directories)
+	- [Files](#files)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## **Description**
 
-This is just an initialized Laravel 5.5 project. The files modified are the following:
+This is just an initialized Laravel 5.5 project with some changes that I always do in my projects
+
+## **Usage**
+
+```sh
+composer create-project alextigaer/laravel-basic-project ProjectName dev-master
+```
+
+## **Changes**
+
+The files modified are the following:
 
 ### Directories
 
-#### Created:
+- Created 'app\Exceptions\User'
+- Created 'app\Models'
+- Created 'app\Repositories'
+- Created 'app\Repositories\Contracts'
+- Created 'app\Repositories\User'
+- Created 'resources\lang\it'
+- Created 'resources\views\auth\backend'
+- Created 'resources\views\auth\layouts'
 
-- app\Exceptions\User
-- app\Models
-- app\Repositories
-- app\Repositories\Contracts
-- app\Repositories\User
+### Files
+
+- Created
+- Edited
+- Removed
 
 ## **Contributing**
 
