@@ -42,5 +42,5 @@ $this->post('password/reset', 'Auth\ResetPasswordController@reset');
 $this->get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 $this->post('password/reset', 'Auth\ResetPasswordController@reset');
 
-Route::get('/dashboard', 'BackendController@dashboard')->name('dashboard');
+Route::get('/dashboard', 'Auth\BackendController@dashboard')->name('dashboard');
 
