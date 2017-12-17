@@ -6,8 +6,17 @@ A Laravel 5.5 basic project
 
 ## **Description**
 
-This is a Laravel 5.5 project initialized with:
-- 
+This is just an initialized Laravel 5.5 project. The files modified are the following:
+
+### Directories
+
+#### Created:
+
+- app\Exceptions\User
+- app\Models
+- app\Repositories
+- app\Repositories\Contracts
+- app\Repositories\User
 
 ## **Contributing**
 
