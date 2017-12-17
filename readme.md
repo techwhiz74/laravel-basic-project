@@ -11,6 +11,7 @@ A Laravel 5.5 basic project
 - [Changes](#changes)
 	- [Directories](#directories)
 	- [Files](#files)
+- [TODO](#todo)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -44,6 +45,10 @@ The files modified are the following:
 - Created
 - Edited
 - Removed
+
+## **TODO**
+
+1. I don't know how to get rid of the question "Do you want to remove the existing VCS (.git, .svn..) history? [Y,n]?" that is asked at the end of the creation process
 
 ## **Contributing**
 
