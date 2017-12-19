@@ -49,6 +49,7 @@ The files modified are the following:
 ## **TODO**
 
 1. I don't know how to get rid of the question "Do you want to remove the existing VCS (.git, .svn..) history? [Y,n]?" that is asked at the end of the creation process
+2. Create a script to edit the .env file after the creation to set the right names (as the name of the project)
 
 ## **Contributing**
 
