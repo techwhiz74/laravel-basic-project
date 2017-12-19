@@ -22,7 +22,7 @@ This is just an initialized Laravel 5.5 project with some changes that I always 
 ## **Usage**
 
 ```sh
-composer create-project alextigaer/laravel-basic-project ProjectName
+composer create-project alextigaer/laravel-basic-project ProjectName --prefer-dist
 ```
 
 ## **Changes**
