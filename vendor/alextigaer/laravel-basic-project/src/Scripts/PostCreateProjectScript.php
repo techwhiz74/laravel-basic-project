@@ -7,7 +7,6 @@ class PostCreateProjectScript
 
     public function editEnv(){
         echo "PROVA";
-        echo config('app.name');
     }
 
 }
