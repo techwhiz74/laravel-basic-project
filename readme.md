@@ -22,7 +22,7 @@ This is just an initialized Laravel 5.5 project with some changes that I always 
 ## **Usage**
 
 ```sh
-composer create-project alextigaer/laravel-basic-project ProjectName dev-master
+composer create-project alextigaer/laravel-basic-project ProjectName
 ```
 
 ## **Changes**
@@ -48,8 +48,7 @@ The files modified are the following:
 
 ## **TODO**
 
-1. I don't know how to get rid of the question "Do you want to remove the existing VCS (.git, .svn..) history? [Y,n]?" that is asked at the end of the creation process
-2. Create a script to edit the .env file after the creation to set the right names (as the name of the project)
+1. Create a script to edit the .env file after the creation to set the right names (as the name of the project)
 
 ## **Contributing**
 
