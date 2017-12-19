@@ -5,7 +5,7 @@ namespace LaravelBasicProject\Scripts;
 class PostCreateProjectScript
 {
 
-    public function editEnv(){
+    public static function editEnv(){
         echo "PROVA";
     }
 
