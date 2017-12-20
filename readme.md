@@ -22,7 +22,7 @@ This is just an initialized Laravel 5.5 project with some changes that I always 
 ## **Usage**
 
 ```sh
-composer create-project alextigaer/laravel-basic-project ProjectName --prefer-dist
+composer create-project alextigaer/laravel-basic-project ProjectName --prefer-dist.
 ```
 
 ## **Changes**
@@ -48,7 +48,7 @@ The files modified are the following:
 
 ## **TODO**
 
-1. Create a script to edit the .env file after the creation to set the right names (as the name of the project)
+//
 
 ## **Contributing**
 
