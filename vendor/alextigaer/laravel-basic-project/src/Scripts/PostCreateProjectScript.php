@@ -19,9 +19,11 @@ class PostCreateProjectScript
         // Edit .env file
         $envFile = $projectDir."\\.env";
         $envFileContent = file_get_contents($envFile);
-        $newEnvFileContent = str_replace("LaravelBasicProject", $projectName, $envFileContent);
-        $newEnvFileContent = str_replace("laravelbasicproject", strtolower($projectName), $newEnvFileContent);
+        $newEnvFileContent = str_replace("LaravelBasicProject", "\"".$projectName."\"", $envFileContent);
+        $newEnvFileContent = str_replace("laravelbasicproject", strtolower(str_replace(" ", "", $projectName)), $newEnvFileContent);
         file_put_contents($envFile, $newEnvFileContent);
+
+        echo "File .env updated!";
     }
 
 }
