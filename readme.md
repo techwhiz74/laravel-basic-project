@@ -46,6 +46,10 @@ The files modified are the following:
 - Edited
 - Removed
 
+### Features
+
+- Added Bootstrap 4
+
 ## **TODO**
 
 //
