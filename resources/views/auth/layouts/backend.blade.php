@@ -33,10 +33,28 @@
                         <a class="nav-link disabled" href="#">Disabled</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
+            @guest
+                <a class="nav-link" href="{{ route('login') }}">@lang('app.login_label', [], app()->getLocale())</a>
+                <a class="nav-link" href="{{ route('register') }}">@lang('app.register_label', [], app()->getLocale())</a>
+            @else
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                        {{ Auth::user()->name }} <span class="caret"></span>
+                    </a>
+
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                            @lang('app.logout_label', [], app()->getLocale())
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </div>
+                </div>
+            @endguest
             </div>
         </nav>
 
