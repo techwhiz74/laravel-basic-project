@@ -15,7 +15,7 @@
     <link href="{{ asset('css/auth/backend.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
+    <div class="container-fluid">
         <div id="nav-container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="{{ route('index') }}">{{ config('app.name') }}</a>
