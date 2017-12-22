@@ -44,7 +44,8 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate",
-            "LaravelBasicProject\\Scripts\\PostCreateProjectScript::editEnv"
+            "LaravelBasicProject\\Scripts\\PostCreateProjectScript::editEnv",
+            "@php artisan vendor:publish --all"
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
