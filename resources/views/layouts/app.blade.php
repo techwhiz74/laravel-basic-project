@@ -12,12 +12,14 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/fontawesome/css/fontawesome-all.css') }}" rel="stylesheet">
+    @yield('styles')
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div class="container-fluid">
         <div id="nav-container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light mb-2">
                 <a class="navbar-brand" href="{{ route('index') }}">{{ config('app.name') }}</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -26,13 +28,13 @@
                 <div class="collapse navbar-collapse" id="navbarToggler">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                            <a class="nav-link" href="{{ route('index') }}">@lang('app.home_label', [], app()->getLocale()) <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{ route('index') }}"><i class="fas fa-home"></i> @lang('app.home_label', [], app()->getLocale()) <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#"><i class="fas fa-link"></i> Link</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Disabled</a>
+                            <a class="nav-link disabled" href="#"><i class="fas fa-times"></i> Disabled</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ml-auto">
@@ -50,6 +52,9 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('dashboard') }}">
+                                        @lang('auth.dashboard_label', [], app()->getLocale())
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">
@@ -78,5 +83,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="{{ asset('js/bootstrap/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
+    @yield('scripts')
 </body>
 </html>

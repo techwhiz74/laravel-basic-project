@@ -16,4 +16,7 @@ return [
     'failed' => 'Queste credenziali non compaiono nei nostri record.',
     'throttle' => 'Troppi tentativi di login. Per favore, riprovare tra :seconds secondi.',
 
+    // Page labels
+    'dashboard_label' => 'Dashboard',
+
 ];
