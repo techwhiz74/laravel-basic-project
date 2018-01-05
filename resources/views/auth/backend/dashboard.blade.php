@@ -16,7 +16,7 @@
                 <div class="card w-50 mx-auto">
                     <div class="card-body">
                         <h4 class="card-title">
-                            <strong>@lang('auth.dashboard_label', [], app()->getLocale())</strong>
+                            <strong>@lang('backend.dashboard_label', [], app()->getLocale())</strong>
                         </h4>
                         <p class="card-text">You are logged in!</p>
                     </div>

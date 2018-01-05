@@ -21,29 +21,31 @@
         <div id="nav-container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
                 <a class="navbar-brand" href="{{ route('index') }}">{{ config('app.name') }}</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-toggler" aria-controls="navbar-toggler" aria-expanded="false" aria-label="@lang('app.toggle_navigation', [], app()->getLocale())">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarToggler">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="{{ route('dashboard') }}"><i class="fas fa-tachometer-alt"></i> @lang('auth.dashboard_label', [], app()->getLocale())</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-link"></i> Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#"><i class="fas fa-times"></i> Disabled</a>
-                        </li>
-                    </ul>
+                <div class="collapse navbar-collapse" id="navbar-toggler">
+                    @auth
+                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{{ route('dashboard') }}"><i class="fas fa-tachometer-alt"></i> @lang('backend.dashboard_label', [], app()->getLocale())</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fas fa-link"></i> Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#"><i class="fas fa-times"></i> Disabled</a>
+                            </li>
+                        </ul>
+                    @endauth
                     <ul class="navbar-nav ml-auto">
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">@lang('app.login_label', [], app()->getLocale())</a>
+                                <a class="nav-link" href="{{ route('login') }}">@lang('auth.login_label', [], app()->getLocale())</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">@lang('app.register_label', [], app()->getLocale())</a>
+                                <a class="nav-link" href="{{ route('register') }}">@lang('auth.register_label', [], app()->getLocale())</a>
                             </li>
                         @else
                             <li class="nav-item dropdown">
@@ -55,7 +57,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">
-                                        @lang('app.logout_label', [], app()->getLocale())
+                                        @lang('auth.logout_label', [], app()->getLocale())
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
