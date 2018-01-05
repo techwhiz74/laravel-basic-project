@@ -6,7 +6,7 @@
             <div class="col">
                 <div class="card w-100">
                     <div class="card-body">
-                        <h3 class="card-title">@lang('app.passwords_label', [], app()->getLocale())</h3>
+                        <h3 class="card-title">@lang('auth.passwords_label', [], app()->getLocale())</h3>
                         @if (session('status'))
                             <div class="alert alert-success">
                                 {{ session('status') }}
@@ -17,7 +17,7 @@
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="email" class="col-md-4 control-label">@lang('app.passwords_email_email_label', [], app()->getLocale())</label>
+                                <label for="email" class="col-md-4 control-label">@lang('auth.passwords_email_email_label', [], app()->getLocale())</label>
 
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
 
@@ -30,7 +30,7 @@
 
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary">
-                                    @lang('app.passwords_email_send_label', [], app()->getLocale())
+                                    @lang('auth.passwords_email_send_label', [], app()->getLocale())
                                 </button>
                             </div>
                         </form>
