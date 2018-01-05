@@ -40,10 +40,10 @@
                     <ul class="navbar-nav ml-auto">
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">@lang('app.login_label', [], app()->getLocale())</a>
+                                <a class="nav-link" href="{{ route('login') }}">@lang('auth.login_label', [], app()->getLocale())</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">@lang('app.register_label', [], app()->getLocale())</a>
+                                <a class="nav-link" href="{{ route('register') }}">@lang('auth.register_label', [], app()->getLocale())</a>
                             </li>
                         @else
                             <li class="nav-item dropdown">
@@ -53,12 +53,12 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('dashboard') }}">
-                                        @lang('auth.dashboard_label', [], app()->getLocale())
+                                        @lang('backend.dashboard_label', [], app()->getLocale())
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">
-                                        @lang('app.logout_label', [], app()->getLocale())
+                                        @lang('auth.logout_label', [], app()->getLocale())
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
