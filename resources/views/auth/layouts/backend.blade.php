@@ -21,7 +21,7 @@
         <div id="nav-container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
                 <a class="navbar-brand" href="{{ route('index') }}">{{ config('app.name') }}</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-toggler" aria-controls="navbar-toggler" aria-expanded="false" aria-label="@lang('app.toggle_navigation', [], app()->getLocale())">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-toggler" aria-controls="navbar-toggler" aria-expanded="false" aria-label="@lang('backend.toggle_navigation', [], app()->getLocale())">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 

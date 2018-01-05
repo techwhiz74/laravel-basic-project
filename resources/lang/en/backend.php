@@ -2,8 +2,6 @@
 
 return [
 
-    'app_name' => 'Name',
-
     // Page labels
     'dashboard_label' => 'Dashboard',
 
