@@ -52,7 +52,7 @@ class Handler extends ExceptionHandler
             $statusCode = 500;
             $message = __('errors.status_500_message', [], app()->getLocale());
 
-            switch ($exception->getStatusCode()) {
+            switch($exception->getStatusCode()) {
                 case 404:
                     $statusCode = 404;
                     $message = __('errors.status_404_message', [], app()->getLocale());
