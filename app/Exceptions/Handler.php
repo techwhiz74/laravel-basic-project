@@ -59,7 +59,7 @@ class Handler extends ExceptionHandler
                     break;
             }
 
-            return response()->view('layouts.errors',
+            return response()->view('error',
                 ['status' => $statusCode, 'message' => $message],
                 $statusCode);
         }
