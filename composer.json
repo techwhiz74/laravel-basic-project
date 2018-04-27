@@ -1,13 +1,13 @@
 {
     "name": "alextigaer/laravel-basic-project",
-    "description": "A Laravel 5.5 basic project",
+    "description": "A Laravel 5.6 basic project",
     "keywords": ["framework", "laravel", "basic", "project"],
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": ">=7.0.0",
+        "php": ">=7.1.3",
         "fideloper/proxy": "~3.3",
-        "laravel/framework": "5.5.*",
+        "laravel/framework": "5.6.*",
         "laravel/tinker": "~1.0",
         "alextigaer/rep-o-matic": "^1.1.1"
     },

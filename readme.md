@@ -1,6 +1,6 @@
 # **Laravel Basic Project**
 
-A Laravel 5.5 basic project
+A Laravel 5.6 basic project
 
 ---
 
@@ -49,6 +49,7 @@ The files modified are the following:
 ### Features
 
 - Added Bootstrap 4
+- Custom error page
 
 ## **TODO**
 
