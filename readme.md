@@ -1,6 +1,6 @@
 # **Laravel Basic Project**
 
-A Laravel 5.5 basic project
+A Laravel 5.6 basic project
 
 ---
 
