@@ -16,42 +16,42 @@ class UserEloquentRepository implements UserRepository
 
     public function getAll()
     {
-        $allUser = User::all();
+        $allUsers = User::all();
 
-        return $allUser;
+        return $allUsers;
     }
 
     public function create(array $attributes)
     {
-        $User = new User;
+        $user = new User;
 
         foreach($attributes as $name => $value){
-            $User->{$name} = $value;
+            $user->{$name} = $value;
         }
 
-        if(!$User->save())
+        if(!$user->save())
             throw new UserNotCreatedException;
 
-        return $User;
+        return $user;
     }
 
     public function update(array $attributes)
     {
         try{
-            $User = $this->findFirst();
+            $user = $this->findFirst();
 
             foreach($attributes as $name => $value){
-                $User->{$name} = $value;
+                $user->{$name} = $value;
             }
 
-            if(!$User->save())
+            if(!$user->save())
                 throw new UserNotUpdatedException;
         }
         catch(UserNotFoundException $e){
             throw new UserNotUpdatedException;
         }
 
-        return $User;
+        return $user;
     }
 
     public function delete($id)
@@ -63,12 +63,12 @@ class UserEloquentRepository implements UserRepository
 
     public function find($id)
     {
-        $User = User::where('id', '=', $id)
+        $user = User::where('id', '=', $id)
             ->first();
 
-        if ($User === null)
+        if ($user === null)
             throw new UserNotFoundException;
 
-        return $User;
+        return $user;
     }
 }

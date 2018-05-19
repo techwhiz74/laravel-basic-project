@@ -12,6 +12,6 @@ interface UserRepository {
 
     public function delete($id);
 
-    public function find($Id);
+    public function find($id);
 
 }
