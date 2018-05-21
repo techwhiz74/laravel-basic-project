@@ -14,7 +14,7 @@
 Route::get('/', 'HomeController@index')->name('index');
 
 // Backend Routes...
-Route::prefix('app-backend')->group(function() {
+Route::prefix(config('app.backend'))->group(function() {
         Route::get('/dashboard', 'Auth\BackendController@dashboard')->name('dashboard');
 
         // Authentication Routes...
